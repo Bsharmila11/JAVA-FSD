@@ -1,0 +1,13 @@
+public class MyThread extends Thread
+{
+ 	public void run()
+ 	{
+  		System.out.println("Thread started Running..");
+}
+ 	public static void main( String args[] )
+ 	{
+  		MyThread mt = new  MyThread();
+  		mt.setPriority(2);
+  		mt.start();
+ 	}
+}

@@ -1,0 +1,10 @@
+public class MyThread3 extends Thread
+{
+	 public static void main( String args[] ) throws Exception
+	 {
+	  		MyThread3 mt = new  MyThread3();
+	  		System.out.println("Hii");
+	  		mt.sleep(5000);
+	  		System.out.println("Hello");
+	 }
+}

@@ -1,0 +1,17 @@
+public class Program021 implements Runnable
+{
+	 public void run()
+	 {
+	  		System.out.println("Runnaable Thread");
+	 }
+	 public static void main( String args[] )
+	 {
+	  		Program021 mt = new  Program021();
+	  		Thread t=new Thread(mt);
+	  		System.out.println(mt);
+	  		t.setPriority(2);
+	  		System.out.println(mt);
+	  		t.start();
+	 }
+}
+

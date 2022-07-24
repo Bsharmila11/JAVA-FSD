@@ -1,0 +1,9 @@
+package default package;
+
+public class Program02a1{
+
+	public void display() 
+    { 
+        System.out.println("This is Public Access Specifiers"); 
+    } 
+}

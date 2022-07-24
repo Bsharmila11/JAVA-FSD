@@ -1,0 +1,45 @@
+import java.io.*;
+import java.util.*;
+public class FileHandling
+{
+	public static void main(String args[])
+	{
+		try
+		{
+			File f=new File("Sample.txt");
+			if(f.createNewFile())
+			{
+				System.out.println("File Created\n"+f.getName());
+			}
+			else
+			{
+				System.out.println("File Already Exists..");
+			}
+			Scanner Reader=new Scanner(f);
+			while(Reader.hasNextLine())
+			{
+				String data=Reader.nextLine();
+				System.out.println(data);
+			}
+			Reader.close();
+			FileWriter Writer= new FileWriter("Sample.txt");
+			Writer.write("File Handling");
+			Writer.close();
+			System.out.println(f);
+			System.out.println("Successfully written.");
+			if (f.delete()) {
+	            System.out.println("The deleted file is : "
+	                               + f.getName());
+	        }
+	        else {
+	            System.out.println(
+	                "Failed in deleting the file.");
+	        }
+		}
+		catch(IOException e)
+		{
+			System.out.println("An Error Occured");
+		}
+		
+	}
+}
