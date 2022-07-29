@@ -32,6 +32,31 @@ public class Program09
 		System.out.println("\n");
 		System.out.println(a.isEmpty());
 		System.out.println("\n");
+		System.out.println("Creating String Buffer");
+		StringBuffer c=new StringBuffer("Happy Learning");
+		System.out.println(c);
+		System.out.println(c.append("Enjoy the lecture"));
+		System.out.println(c.replace(0,1,"HA"));
+		System.out.println(c.delete(0,1));
+		System.out.println("\n");
+		System.out.println("Creating String Buffer");
+		StringBuilder d=new StringBuilder("Strings Demo");
+		System.out.println(d);
+		System.out.println(d.append(" Program"));
+		System.out.println(d.reverse());
+		System.out.println(d.delete(0,1));
+		System.out.println("\n");
+		String str="Learning";
+		System.out.println("Conversion of Strings to StringBuffer");
+		StringBuffer e = new StringBuffer(str); 
+        		e.reverse();
+        		System.out.println(e); 
+        System.out.println("\n");
+		String string="Hello";
+		System.out.println("Conversion of Strings to StringBuilder");
+		StringBuilder f = new StringBuilder(string); 
+        		f.append("World");
+        		System.out.println(f); 
 		
 	}
 }

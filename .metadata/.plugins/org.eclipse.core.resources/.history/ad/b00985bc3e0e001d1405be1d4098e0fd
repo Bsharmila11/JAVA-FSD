@@ -18,7 +18,7 @@ class Info implements Runnable {
 	}
 	}
 }
-public class Program14 {
+public class InnerThreadCommunication {
 	public static void main(String[] args) {
 	Info obj = new Info();
 	Thread t1 = new Thread(obj);
