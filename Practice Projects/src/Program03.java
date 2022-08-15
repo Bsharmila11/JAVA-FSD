@@ -19,23 +19,23 @@ public class Program03
 		switch(operator)
 		{
 			case '+' : answer=num1+num2;
-				System.out.println(answer);
+				System.out.println("After Addition : "+answer);
 				break;
 			
 			case '-' : answer =num1-num2;
-				System.out.println(answer);
+				System.out.println("After Subtraction : "+answer);
 				break;
 
 			case '*' : answer=num1*num2;
-				System.out.println(answer);
+				System.out.println("After Multiplication : "+answer);
 				break;
 
 			case '/' : answer=num1/num2;
-				System.out.println(answer);
+				System.out.println("After Division : "+answer);
 				break;
 
 			case '%' : answer=num1%num2;
-				System.out.println(answer);
+				System.out.println("After Modulo : "+answer);
 				break;
 
 			default: System.out.println("Enter Valid Operator");
