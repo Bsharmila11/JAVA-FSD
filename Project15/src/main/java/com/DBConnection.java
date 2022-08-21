@@ -6,19 +6,16 @@ import java.math.BigDecimal;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
-import java.util.Scanner;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 
 
 /**
@@ -43,43 +40,27 @@ public class DBConnection extends HttpServlet {
                 // TODO Auto-generated method stub
                 
                 try {
-                		
                          PrintWriter out = response.getWriter();
                          out.println("<html><body>");
-                         
-                       
-                        
-                        
-                         Class.forName("com.mysql.cj.jdbc.Driver");
-             			out.println("Driver Loaded Successfully...");
-             			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/javatraining","root","Sharmila@11");
-             			out.println("Connected Successfully...");
-           
-                        PreparedStatement pstmt=con.prepareStatement("add_product(?, ?)");
-                        pstmt.setString(1, "new product");
-                        pstmt.setBigDecimal(2, new BigDecimal(1900.50));
-                        pstmt.executeUpdate();
-                        
+                        Class.forName("com.mysql.cj.jdbc.Driver");
+                		out.println("Driver Loaded Successfully...");
+                		Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/javatraining","root","Sharmila@11");
+                		out.println("Connected Successfully...");
+                        CallableStatement stmt = conn.prepareCall("{call add_product(?, ?)}");
+                        stmt.setString(1, "new product");
+                        stmt.setBigDecimal(2, new BigDecimal(1900.50));
+                        stmt.executeUpdate();
                         out.println("Stored procedure has been executed.<Br>");
-                        pstmt.close();
-                        
-                        
+                        stmt.close();
                         out.println("</body></html>");
-                        con.close();
-                        
-                } catch (ClassNotFoundException e) {
+                        conn.close();
+                     } 
+                catch (ClassNotFoundException e) {
                         e.printStackTrace();
-                } catch (SQLException e) {
+                } 
+                catch (SQLException e) {
                         e.printStackTrace();
                 }
         }
-
-        /**
-         * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-         */
-        protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-                // TODO Auto-generated method stub
-                doGet(request, response);
-        }
-
 }
+
