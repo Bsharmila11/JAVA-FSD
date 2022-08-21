@@ -152,7 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Phase2EndProject" path="/Phase2EndProject" reloadable="true" source="org.eclipse.jst.jee.server:Phase2EndProject"/><Context docBase="JSPProject6" path="/JSPProject6" reloadable="true" source="org.eclipse.jst.jee.server:JSPProject6"/><Context docBase="JSPProject5" path="/JSPProject5" reloadable="true" source="org.eclipse.jst.jee.server:JSPProject5"/><Context docBase="JSPProject4" path="/JSPProject4" reloadable="true" source="org.eclipse.jst.jee.server:JSPProject4"/><Context docBase="JSPProject3" path="/JSPProject3" reloadable="true" source="org.eclipse.jst.jee.server:JSPProject3"/><Context docBase="JSPProject2" path="/JSPProject2" reloadable="true" source="org.eclipse.jst.jee.server:JSPProject2"/><Context docBase="JSPProject1" path="/JSPProject1" reloadable="true" source="org.eclipse.jst.jee.server:JSPProject1"/><Context docBase="JSPDemo" path="/JSPDemo" reloadable="true" source="org.eclipse.jst.jee.server:JSPDemo"/><Context docBase="InsertWithHibernet" path="/InsertWithHibernet" reloadable="true" source="org.eclipse.jst.jee.server:InsertWithHibernet"/></Host>
+      <Context docBase="SpringSimpleMVC" path="/SpringSimpleMVC" reloadable="true" source="org.eclipse.jst.jee.server:SpringSimpleMVC"/></Host>
     </Engine>
   </Service>
 </Server>

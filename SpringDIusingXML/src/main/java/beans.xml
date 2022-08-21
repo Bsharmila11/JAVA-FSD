@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+<bean class="com.Employee" id="emp1" scope="singleton"></bean>
+<bean class="com.Employee" id="emp2" scope="prototype"></bean>
+<bean class="com.Employee" id="emp3">
+    <constructor-arg value="1206"></constructor-arg>
+    <constructor-arg value="Sharmila"></constructor-arg>
+    <constructor-arg value="29000"></constructor-arg>
+</bean>
+<bean class="com.Employee" id="emp4">
+
+<property name="id" value="1209"></property>
+<property name="name" value="Srilekha"></property>
+<property name="salary" value="25000"></property>
+</bean>
+
+<bean class="com.Employee" id="emp5">
+
+<property name="id" value="1241"></property>
+<property name="name" value="Anitha"></property>
+
+</bean>
+
+<bean class="com.Address" id="add1">
+
+<property name="city" value="Tadepalligudem"></property>
+<property name="state" value="Andhra"></property>
+
+</bean>
+
+<bean class="com.Address" id="add">
+
+<property name="city" value="Tanuku"></property>
+<property name="state" value="Andhra"></property>
+
+</bean>
+
+<bean class="com.Employee" id="emp7">
+
+<property name="id" value="1202"></property>
+<property name="name" value="Srivalli"></property>
+<property name="salary" value="29000"></property>
+<property name="add" ref="add1"></property>
+
+</bean>
+
+<bean class="com.Employee" id="emp8" autowire="byType">
+
+<property name="id" value="1202"></property>
+<property name="name" value="Srivalli"></property>
+<property name="salary" value="29000"></property>
+
+</bean>
+
+<bean class="com.Employee" id="emp9" autowire="byName">
+
+<property name="id" value="1202"></property>
+<property name="name" value="Srivalli"></property>
+<property name="salary" value="29000"></property>
+
+</bean>
+</beans>
