@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="projectmanagers.js"></script>
+    <style>
+       body
+        {
+            border: 5px;
+            border-radius: 5in;
+            border-style:groove;
+            border-width: 10px;
+            background-position: 5in;
+            box-sizing:inherit;
+            -moz-box-align: center;
+        }
+        input
+        {
+            font-size: large;
+            border-color: black;
+            background-color: blanchedalmond;
+            border-radius: 2px;
+        }
+        label
+        {
+            font-size: larger;
+            color: crimson;
+            font-weight: bolder;
+
+        }
+        h1
+        {
+            color: green;
+            font-size: x-large;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <center>
+
+    <h1>Enter New Budget Details Here..</h1>
+    <br>
+    <br>
+    <label>Client Name : </label>
+    <br>
+    <br>
+    <input type="text" id="clientname" placeholder="Enter Your Client Name Here.." size="50" required/>
+    <br>
+    <br>
+    <br>
+    <label>Project Name : </label>
+    <br>
+    <br>
+    <input type="text" id="projectname" placeholder="Enter Your Project Name Here.." size="50" required/>
+    <br>
+    <br>
+    <br>
+    <label>Budget : </label>
+    <br>
+    <br>
+    <input type="text" id="budget" placeholder="Enter Your Budget Here.." size="50" required/>
+    <br>
+    <br>
+    <br>
+    <br>
+    <input type="button" value="Add Data" onclick="addData()"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="index.html">Back</a>
+    <br>
+    <br>
+    <table id="result">
+
+    </table>
+    <div id="out">
+
+    </div>
+   </center>
+
+</body>
+</html>
