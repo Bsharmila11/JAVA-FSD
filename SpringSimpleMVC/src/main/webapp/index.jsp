@@ -8,5 +8,8 @@
 </head>
 <body>
 <a href="hello">Click Me</a>
+<a href="hi">Click Me</a>
+<a href="login.jsp">Click Me</a>
+<a href="loginDb.jsp">Click Me to Login from a Database</a>
 </body>
 </html>

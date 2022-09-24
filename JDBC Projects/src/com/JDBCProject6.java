@@ -13,7 +13,7 @@ public class JDBCProject6
 			System.out.println("Connected Successfully...");
 			Statement stmt=con.createStatement();
 			System.out.println("Statement is Ready...");
-			int result=stmt.executeUpdate("create database java");
+			int result=stmt.executeUpdate("create database java1");
 			if(result>0)
 			{
 				System.out.println("Database Created Successfully");

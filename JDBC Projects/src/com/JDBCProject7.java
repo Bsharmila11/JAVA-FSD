@@ -13,7 +13,7 @@ public class JDBCProject7
 			System.out.println("Connected Successfully...");
 			Statement stmt=con.createStatement();
 			System.out.println("Statement is Ready...");
-			int result=stmt.executeUpdate("insert into employee values(1241,'Anitha',0)");
+			int result=stmt.executeUpdate("insert into employee values(1239,'Srija',29000)");
 			if(result>0)
 			{
 				System.out.println("Inserted Successfully");

@@ -15,7 +15,7 @@ public class DemoTest {
 		Transaction tran = session.getTransaction();
 		//System.out.println("Table created....");
 		Question q1 = new Question();
-		q1.setQid(2);
+		q1.setQid(3);
 		q1.setQuestion("What is Java");
 		String ans[]= {"Java is OOP","Java is not OOP","Java is platform dependent","Java is not secure"};
 		q1.setAnswers(ans);

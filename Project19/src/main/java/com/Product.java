@@ -47,7 +47,7 @@ public class Product extends HttpServlet {
 		try
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/javatraining","root","Sharmila@11");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/java","root","Sharmila@11");
 			PreparedStatement pstmt=con.prepareStatement("select * from product where id=?");
 			pstmt.setString(1,id);
 			RequestDispatcher rd2 = request.getRequestDispatcher("product.html");

@@ -12,7 +12,7 @@ public class JDBCProject8
 			try
 			{
 				Class.forName("com.mysql.cj.jdbc.Driver");
-				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/javatraining","root","Sharmila@11");
+				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/java","root","Sharmila@11");
 				PreparedStatement pstmt=con.prepareStatement("select * from product where id=?");
 				System.out.println("Enter the ID");
 				Scanner sc=new Scanner(System.in);

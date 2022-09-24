@@ -13,7 +13,7 @@ public class JDBCProject5
 			System.out.println("Connected Successfully...");
 			Statement stmt=con.createStatement();
 			System.out.println("Statement is Ready...");
-			int result=stmt.executeUpdate("create database java");
+			int result=stmt.executeUpdate("create database java2");
 			if(result>0)
 			{
 				System.out.println("Database Created Successfully");
@@ -22,9 +22,9 @@ public class JDBCProject5
 			{
 				System.out.println("Database Already Exists");
 			}
-            stmt.executeUpdate("use java");
+            stmt.executeUpdate("use java2");
             System.out.println("Database Changed Successfully");
-            stmt.executeUpdate("drop database java");
+            stmt.executeUpdate("drop database java2");
             System.out.println("Database Dropped Successfully");
 
 		stmt.close();

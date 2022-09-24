@@ -15,4 +15,13 @@ public class MyController {
 		mav.setViewName("display.jsp");
 		return mav;
 	}
+	
+	@RequestMapping(value="hi",method=RequestMethod.GET)
+	public ModelAndView sayHi()
+	{
+		ModelAndView mav=new ModelAndView();
+		System.out.println("I came There");
+		mav.setViewName("display1.jsp");
+		return mav;
+	}
 }
